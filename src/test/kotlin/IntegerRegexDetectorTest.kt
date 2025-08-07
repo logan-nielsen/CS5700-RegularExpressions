@@ -18,6 +18,7 @@ class IntegerRegexDetector {
         assertFalse { detector.parseString("01") }
         assertFalse { detector.parseString("") }
         assertFalse { detector.parseString("abc") }
+        assertFalse { detector.parseString("4abc") }
         assertFalse { detector.parseString("-123") }
     }
 }

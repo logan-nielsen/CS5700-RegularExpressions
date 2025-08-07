@@ -9,7 +9,11 @@ abstract class RegexDetector {
             currentState = currentState.parseChar(char.toString())
         }
 
-        return currentState.isAccepting
+        return currentState.isAccepting && otherConditions(stringToParse)
+    }
+
+    protected open fun otherConditions(stringToParse: String): Boolean {
+        return true
     }
 
     abstract val initialState: RegexState
