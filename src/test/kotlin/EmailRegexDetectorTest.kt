@@ -19,5 +19,13 @@ class EmailRegexDetectorTest {
         assertFalse(detector.parseString("test@domain@com"))
         assertFalse(detector.parseString("test space@domain.com"))
         assertFalse(detector.parseString("name@subdomain.domain.com"))
+        assertFalse(detector.parseString("test@"))
+        assertFalse(detector.parseString("test@something."))
+        assertFalse(detector.parseString("a@ .com"))
+        assertFalse(detector.parseString("a@@.com"))
+        assertFalse(detector.parseString("a@b. "))
+        assertFalse(detector.parseString("a@b. @"))
+        assertFalse(detector.parseString("a@b. ."))
+        assertFalse(detector.parseString(""))
     }
 }

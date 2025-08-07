@@ -8,7 +8,7 @@ class EmailDotState : RegexState() {
     override val isAccepting = false
 
     override fun parseChar(nextChar: String): RegexState = when (nextChar) {
-        in " &." -> ErrorState()
+        in " @." -> ErrorState()
         else -> EmailPart3State()
     }
 }

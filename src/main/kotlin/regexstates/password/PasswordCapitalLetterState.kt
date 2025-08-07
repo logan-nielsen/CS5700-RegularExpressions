@@ -10,7 +10,7 @@ class PasswordCapitalLetterState : RegexState() {
     override val isAccepting = false
 
     override fun parseChar(nextChar: String): RegexState = when (nextChar) {
-        in SPECIAL_CHARACTERS -> PasswordSpecialCharacterState()
+        in SPECIAL_CHARACTERS -> PasswordEndingSpecialCharacterState()
         else -> this
     }
 }

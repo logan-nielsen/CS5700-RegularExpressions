@@ -10,7 +10,7 @@ class FloatingPointRegexDetectorTest {
         val detector = FloatingPointRegexDetector()
 
         // Valid floating point numbers
-//        assertTrue { detector.parseString("123.45") }
+        assertTrue { detector.parseString("123.45") }
         assertTrue { detector.parseString("0.20000") }
         assertTrue { detector.parseString("12349871234.12340981234098") }
         assertTrue { detector.parseString(".123") }
@@ -23,5 +23,9 @@ class FloatingPointRegexDetectorTest {
         assertFalse { detector.parseString("abc") }
         assertFalse { detector.parseString("-123.45") }
         assertFalse { detector.parseString("01.45") }
+        assertFalse { detector.parseString("0") }
+        assertFalse { detector.parseString("1a") }
+        assertFalse { detector.parseString("1.a") }
+        assertFalse { detector.parseString("1.23a") }
     }
 }

@@ -9,7 +9,7 @@ class EmailPart2State : RegexState() {
 
     override fun parseChar(nextChar: String): RegexState = when (nextChar) {
         "." -> EmailDotState()
-        in " &" -> ErrorState()
+        in " @" -> ErrorState()
         else -> this
     }
 }

@@ -14,6 +14,8 @@ class BinaryRegexDetectorTest {
 
         assertFalse(detector.parseString(""))
         assertFalse(detector.parseString("0"))
+        assertFalse(detector.parseString("1001010"))
+        assertFalse(detector.parseString("10a"))
         assertFalse(detector.parseString("00"))
         assertFalse(detector.parseString("2"))
         assertFalse(detector.parseString("12"))
