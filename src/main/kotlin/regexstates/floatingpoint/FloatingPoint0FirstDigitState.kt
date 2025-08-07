@@ -1,6 +1,5 @@
 package org.example.regexstates.floatingpoint
 
-import org.example.DIGITS
 import org.example.regexstates.ErrorState
 import org.example.regexstates.RegexState
 

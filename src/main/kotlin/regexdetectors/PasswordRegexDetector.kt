@@ -1,6 +1,5 @@
 package org.example.regexdetectors
 
-import org.example.regexstates.RegexState
 import org.example.regexstates.password.PasswordNoRequirementsMetState
 
 class PasswordRegexDetector: RegexDetector() {
